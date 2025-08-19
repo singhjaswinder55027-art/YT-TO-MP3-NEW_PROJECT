@@ -48,7 +48,6 @@
       box-shadow: 0 0 15px #00c6ff;
     }
 
-    /* Quality Boxes */
     .quality-grid {
       display: flex;
       flex-wrap: wrap;
@@ -91,7 +90,6 @@
       100% { box-shadow: 0 0 25px #00c6ff; }
     }
 
-    /* Convert Button */
     button[type="submit"] {
       padding: 15px 30px;
       font-size: 18px;
@@ -110,7 +108,6 @@
       box-shadow: 0 10px 25px rgba(0,198,255,0.6);
     }
 
-    /* Channel Box */
     .channel-box {
       background: #0072ff;
       color: white;
@@ -134,7 +131,6 @@
       font-size: 16px;
     }
 
-    /* Terms */
     .terms {
       margin-top: 30px;
       font-size: 12px;
@@ -145,7 +141,6 @@
       line-height: 1.5;
     }
 
-    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -170,7 +165,6 @@
     <form id="downloadForm" action="/download" method="post">
       <input type="text" name="url" placeholder="Paste YouTube link here" required>
 
-      <!-- Quality Selection -->
       <div class="quality-grid">
         <div class="quality-box" data-quality="480p" data-size="113 KB"><span>480p</span><span>113 KB</span></div>
         <div class="quality-box" data-quality="720p" data-size="230 KB"><span>720p</span><span>230 KB</span></div>
@@ -181,12 +175,10 @@
       <button type="submit">Convert to MP3</button>
     </form>
 
-    <!-- Join Channel -->
     <div class="channel-box">
       📢 <a href="https://t.me/+Cr3JY5cWL1dlNDg1" target="_blank">Join My Channel</a>
     </div>
 
-    <!-- Terms -->
     <div class="terms">
       <p>⚠️ Terms & Conditions:</p>
       <p>1. This tool is for personal use only.</p>
@@ -197,7 +189,6 @@
   </div>
 
   <script>
-    // Quality selection logic
     const boxes = document.querySelectorAll('.quality-box');
     const hiddenInput = document.getElementById('selectedQuality');
 
@@ -209,7 +200,6 @@
       });
     });
 
-    // Prevent form submit if no quality selected
     const form = document.getElementById('downloadForm');
     form.addEventListener('submit', function(e){
       if(!hiddenInput.value){
